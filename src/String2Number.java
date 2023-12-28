@@ -29,4 +29,38 @@ public class String2Number {
         }
         return a;
     }
+    public static int blackJack(int a, int b){
+        int nearest = 0;
+        if(a > 21 && b > 21){
+            return nearest;
+        }
+        if(a > 21){
+            nearest = b;
+            System.out.println(b);
+        }
+        if(a > b){
+            nearest = a;
+            System.out.println(a);
+        }
+        return nearest;
+    }
+
+    public static int findLargest(int[] arr){
+        int largest = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i]> largest){
+                largest = arr[i];
+            }
+        }
+        return largest;
+    }
+    public static String comboString(String a, String b){
+        String combo = "";
+        if(a.length() < b.length()){
+            combo += a + b + a;
+        } else{
+            combo += b +a + b;
+        }
+        return combo;
+    }
 }
