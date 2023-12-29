@@ -63,4 +63,34 @@ public class String2Number {
         }
         return combo;
     }
+
+    public static boolean isStrictlyIncreasing(int[] nums){
+        int previousNum = nums[0];
+        boolean isIncreasing = false;
+        for (int i = 1; i < nums.length; i++){
+
+            if(nums[i] > previousNum){
+                isIncreasing = true;
+                previousNum = nums[i];
+            }
+        }
+        return isIncreasing;
+    }
+
+    public static boolean has23(int[] nums){
+        boolean has2 = false;
+        boolean has3 = false;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == 2){
+                has2 = true;
+            }
+            if(nums[i] == 3){
+                has3 = true;
+            }
+        }
+        if (has2 && has3){
+            return true;
+        }
+        return false;
+    }
 }
